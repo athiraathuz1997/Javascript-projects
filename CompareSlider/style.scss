@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#slider {
+    max-width: 900px;
+    height: 400px;
+    margin: 30px auto;
+    position: relative;
+    cursor: ew-resize;
+}
+
+.image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: clip-path 100ms;
+}
+
+.active {
+    z-index: 1;
+    /* clip-path: inset(0 0 0 20%); */
+}
+.divider{
+    position: absolute;
+    width: 2px;
+    height:100%;
+    background: #fff;
+    pointer-events:none;
+    z-index:2;
+    left: 0;
+    top: 0;
+    transition: all 100ms;
+}
